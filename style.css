@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+iframe::-webkit-scrollbar { 
+    display: none; 
+}
+#wrapper {
+	max-width:1020px;
+	margin:0 auto;
+	width: 80%;
+	height: 100%;
+	overflow:hidden;
+}
+div iframe {
+	border:0;
+	overflow:hidden;
+}
