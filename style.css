@@ -30,6 +30,7 @@ https://codepen.io/keithclark/pen/zqcEd
   bottom: 0;
   left: 0;
   right: 0;
+  z-index:-1;
 }
 
 .stars {
@@ -42,8 +43,9 @@ https://codepen.io/keithclark/pen/zqcEd
     radial-gradient(2px 2px at 160px 120px, #ddd, rgba(0,0,0,0));
   background-repeat: repeat;
   background-size: 200px 200px;
-  animation: zoom 5s infinite;
+  animation: zoom 3s infinite;
   opacity: 0;
+  z-index:-1;
 }
 
 .stars:nth-child(1) {
