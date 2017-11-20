@@ -85,3 +85,8 @@ https://codepen.io/keithclark/pen/zqcEd
     transform: scale(3.5);
   }
 }
+
+img {
+	display: block;
+	margin:auto;
+	width:60%;
