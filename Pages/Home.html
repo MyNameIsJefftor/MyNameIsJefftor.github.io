@@ -5,39 +5,46 @@
 <title>Untitled Document</title>
 <link href="../lcars/css/lcars.css" rel="stylesheet" type="text/css">
 <style>
-::-webkit-scrollbar { 
-    display: none;
-}
 html, body {background: #333}
+.grid-container{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	grid-gap: 0px;
+	background-color: #000;
+	padding: 0px;
+}
+.grid-container > div {
+	background-color: grey;
+	text-align: center;
+	padding: 20px 0;
+	font-size: 2em;
+}
+.item1 {
+	text-align: left !important;
+	grid-column: 1/5;
+	background-color:#0CF !important;
+}
+booty {
+	color: white;
+}
+TXTB {
+	color: black;
+	font-family: "Lucida Console", Lucida, Monospace;
+	font-size: 2.5em;
+}
 </style>
 <link href="../style.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<!-- Star trek Menu -->
-	<div class="lcars-container">
-		<!-- Top row -->
-		<div class="lcars-row spaced">
-			<div class="lcars-column u-1-8 lcars-elbow left bottom lcars-blue-bg">
-				<a href="#">Side Button 1</a>
-			</div>
-			<div class="lcars-column u-6-8 lcars-divider lcars-blue-tan-divide">
-				<div class="lcars-row">
-				</div>
-				<div class="lcars-column u-1-2">
-					<h1 class="right" style="color:#6878CC;">JEFFTOR</h1>
-				</div>
-			</div>
-			<div class="lcars-column u-1-8 lcars-elbow right bottom lcars-blue-bg">
-			</div>
-		</div>
-	</div>
-	<!-- Row -->
-	<div class="lcars-column u-1-8">
-		<ul class="lcars-menu">
-			<li class="lcars-blue-bg"><a href="#">Typical</a></li>
-			<li class="lcars-tan-bg tall"><a href="#">Howdy</a></li>
-		</ul>
-	</div>
+<booty>
+<div class="grid-container">
+	<div class="item1"><TXTB>Jefftor</TXTB></div>
+    <div class="item2" href="www.google.com">2</div>
+    <div class="item3">3</div>
+    <div class="item4">4</div>
+    <div class="item5">5</div>
+</div>
+</booty>
 </body>
 </html>
