@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Tr0n3</title>
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+        var unityInstance = UnityLoader.instantiate("unityContainer", "Build/New folder.json", {onProgress: UnityProgress});
+    </script>
+    <style>
+        html, body {
+            background: #333;
+            overflow:hidden;
+        }
+    </style>
+</head>
+<body>
+        <div class="webgl-content" style="width:100%; height:100%; overflow:hidden;">
+            <div id="unityContainer" style="width: 100%; height: 56%; overflow:hidden; padding:0px;"></div>
+            <div class="footer">
+                <div class="webgl-logo"></div>
+                <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+                <div class="title">Tr0n3</div>
+            </div>
+        </div>
+</body>
+</html>

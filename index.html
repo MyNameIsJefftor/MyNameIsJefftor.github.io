@@ -1,17 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Kurtis McCammon Personal Website</title>
+<title>++Void</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 <style>
 html {height: 100%; margin:0;}
-body {
-	height: 100%;
-	margin: 0;
-	background-color:#000;
-	background-position: center;
-	background-size: 100% 100%;
+    body {
+        height: 100%;
+        margin: 0;
+        background-color: #000;
+        background-position: center;
+        background-size: 100% 100%;
+        overflow: hidden;
+    }
+div{
+	overflow:auto;
 }
 ::-webkit-scrollbar { 
     display: none; 
@@ -20,16 +24,17 @@ body {
 </head>
 
 <body>
-<div id="wrapper" style="overflow:hidden;">
+	<div id="wrapper">
 
-<iframe src="Pages/Home.html" style="height:100%; width:100%; border:0; overflow:scroll;"></iframe>
-</div>
-<div id="space">
-<div class="stars"></div>
-<div class="stars"></div>
-<div class="stars"></div>
-<div class="stars"></div>
-<div class="stars"></div>
-</div>
+		<iframe src="Pages/Nav.html" style="height:10%; width:100%; border:0;" name="nav"></iframe>
+		<iframe src="Pages/Home.html" style="height:90%; width:100%; border:0;" name="disp"></iframe>
+	</div> 
+	<div id="space">
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
+		<div class="stars"></div>
+	</div>
 </body>
 </html>
