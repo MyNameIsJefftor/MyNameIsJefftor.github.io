@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <button class="tablink" onclick="openPage('Home',this)" id="startOpen">Home</button>
+        <button class="tablink" onclick="openPage('Projects',this)">Projects</button>
+        <button class="tablink" onclick="openPage('AboutMe',this)">About Me</button>
+        <button class="Title">Kurtis's Portfolio</button>
+
+        <div id="Home" class="tabcontent">
+            <h3>Home</h3>
+            <p>Hello there! My name is Kurtis McCammon and I'm a programmer. I mainly do Game development, but am not picky about working on software. I mainly just like solving unique and interesting problems.</p>
+            <p>To get started just click on one of those tabs up there to read the other pages.</p>
+        </div>
+
+        <div id="Projects" class="tabcontent">
+            <h3>Projects</h3>
+            <p>Hello and welcome to my Projects! This is a collection of projects I have worked on in recent times. Most of the non-game projects I've worked on are visiable on my github page</p>
+            <button class="accordion">Lucifer's Hordes early 2021</button>
+            <div class="accordionPanel">
+                <p>Lucifer's Hordes is a rouge-like dungeon crawler. Where you use found weapons and skills to fight off Lucifer's hordes of demons.</p>
+                <div class="row">
+                    <div class="column">
+                        <img src="Lucifer'sHordesImages/Attacking.jpg" alt="A warrior swinging his sword" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Lucifer'sHordesImages/Casting.jpg" alt="A warrior casting a spell" style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Lucifer'sHordesImages/Items.jpg" alt="A warrior approaching an item that is on the ground." style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="Lucifer'sHordesImages/Statue.jpg" alt="A warrior admiring a statue." style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">Void Graphics late 2020</button>
+            <div class="accordionPanel">
+                <p>An open GL graphics engine</p>
+                <div class="row">
+                    <div class="column">
+                        <img src="VoidGraphicsImages/Space.PNG" alt="A planet with an astroid belt and 3 moons." style="width:100%">
+                    </div>
+                    <div class="column">
+                        <img src="VoidGraphicsImages/Sword.PNG" alt="Two swords with gems floating around them." style="width:100%">
+                    </div>
+                </div>
+            </div>
+
+            <button class="accordion">The Anti-Virus Tr0n3 early 2020</button>
+            <div class="accordionPanel">
+                <p>The Anti-Virus Tr0n3 is a 2D platformer designed around the idea of speed running.</p>
+                <div class="row">
+                    <div class="column">
+                        <img src="Tr0n3Images/Falling.PNG" alt="The hero Tr0n3 narrowly escaping an enemy." style="width:100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="AboutMe" class="tabcontent">
+            <h3>About Me</h3>
+            <p>Hello and welcome! My name is Kurtis McCammon. I'm a Full Sail Graduate and have my Bachelors in computer science with a focus on game development. In my free time you can catch me playing games and watching videos about overly complicated math. I may also have an addiction to 4th dimensional math.</p>
+        </div>
+    </body>
+    <script>
+        document.getElementById("startOpen").click();
+
+        var accordion = document.getElementsByClassName("accordion");
+        var i;
+        for(i=0;i<accordion.length;i++){
+            accordion[i].addEventListener("click",function(){
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if(panel.style.display === "block"){
+                    panel.style.display = "none";
+                }
+                else{
+                    panel.style.display = "block";
+                }
+            });
+        }
+    </script>
+</html>
