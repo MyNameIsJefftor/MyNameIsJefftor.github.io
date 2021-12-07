@@ -49,6 +49,12 @@ orange? #965a3b
     --ligherGray: #404040;
     --pagebackground: #414141;
 }
+
+.video{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%
+}
 .tablink{
     background-color:var(--gray);
     color:lightgray;
@@ -78,7 +84,7 @@ orange? #965a3b
 }
 
 .tabcontent{
-    color:lightgray;
+    color:whitesmoke;
     display:none;
     padding: 100px 20px;
     height:100%
@@ -87,7 +93,7 @@ orange? #965a3b
 /*Accordion stuff*/
 .accordion{
     background-color: var(--gray);
-    color:lightgray;
+    color:whitesmoke;
     cursor:pointer;
     padding:10px;
     width: 100%;
@@ -124,20 +130,20 @@ orange? #965a3b
     display:table;
 }
 
-
+*{box-sizing: border-box;}
 
 /* SlideShow stuff */
-.slideshow-container{
+.SlideshowContainer{
     max-width: 1000px;
     position:relative;
     margin:auto;
 }
 
-.mySlides{
+.Slideshow{
     display:none;
 }
 
-.prev, .next{
+.prevSlide, .nextSlide{
     cursor:pointer;
     position:absolute;
     top:50%;
@@ -152,17 +158,17 @@ orange? #965a3b
     user-select: none;
 }
 
-.next{
+.nextSlide{
     right:0;
     border-radius: 3px 0 0 3px;
 }
 
-.prev:hover, .next:hover{
-    background-color: rgba(0,0,0,0.8);
+.prevSlide:hover, .nextSlide:hover{
+    background-color: var(--darkPurple);
 }
 
-.slideText{
-    color:var(--ligherGray);
+.SlideshowCaptionText{
+    color: whitesmoke;
     font-size: 15px;
     padding: 8px 12px;
     position: absolute;
@@ -171,30 +177,31 @@ orange? #965a3b
     text-align: center;
 }
 
-.numbertext{
-    color: var(--ligherGray);
+.SlideNumberText{
+    color: whitesmoke;
+    font-weight: bold;
     font-size: 12px;
     padding: 8px 12px;
     position: absolute;
     top: 0;
 }
 
-.dot{
+.SlideshowDot{
     cursor: pointer;
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: var(--pagebackground);
+    background-color: var(--darkPurple);
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
-.dot:hover{
-    background-color: aliceblue;
+.SlideshowDot:hover, .SlideshowActive{
+    background-color: var(--purple);
 }
 
-.fade{
+.slideFade{
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
     animation-name:fade;

@@ -19,9 +19,49 @@
             <h3>Projects</h3>
             <p>Hello and welcome to my Projects! This is a collection of projects I have worked on in recent times. Most of the non-game projects I've worked on are visiable on my github page</p>
             <button class="accordion">Lucifer's Hordes early 2021</button>
-            <div class="accordionPanel">
+            <div class="accordionPanel" id="LH">
                 <p>Lucifer's Hordes is a rouge-like dungeon crawler. Where you use found weapons and skills to fight off Lucifer's hordes of demons.</p>
-                <div class="row">
+                <div class="SlideshowContainer video" id="LHSlideshowContainer">
+                    <div class="Slideshow slideFade" id="LHSlide">
+                        <div class="SlideNumberText">1 / 5</div>
+                        <img src="Lucifer'sHordesImages/Attacking.jpg" alt="A warrior swinging his sword" style="width:100%">
+                        <div class="SlideshowCaptionText">The warrior swinging his sword</div>
+                    </div>
+                    <div class="Slideshow slideFade" id="LHSlide">
+                        <div class="SlideNumberText">2 / 5</div>
+                        <img src="Lucifer'sHordesImages/Casting.jpg" alt="A warrior casting a spell" style="width:100%">
+                        <div class="SlideshowCaptionText">The warrior casting a spell</div>
+                    </div>
+                    <div class="Slideshow slideFade" id="LHSlide">
+                        <div class="SlideNumberText">3 / 5</div>
+                        <img src="Lucifer'sHordesImages/Items.jpg" alt="A warrior approaching an item that is on the ground." style="width:100%">
+                        <div class="SlideshowCaptionText">The warrior approaching an item that is on the ground</div>
+                    </div>
+                    <div class="Slideshow slideFade" id="LHSlide">
+                        <div class="SlideNumberText">4 / 5</div>
+                        <img src="Lucifer'sHordesImages/Statue.jpg" alt="A warrior admiring a statue" style="width:100%">
+                        <div class="SlideshowCaptionText">The warrior admiring a statue</div>
+                    </div>
+                    <div class="Slideshow slideFade" id="LHSlide">
+                        <div class="SlideNumberText">5 / 5</div>
+                            <video controls width="100%" autoplay muted>
+                                <source src="Videos/LH/LH1080.mp4" type="video/mp4">
+                                ERROR Contact Kurtis.
+                            </video>
+                        <div class="SlideshowCaptionText">A brief trailer</div>
+                    </div>
+                    <a class="prevSlide" onclick="plusSlides(-1, 'LH')">&#10094</a>
+                    <a class="nextSlide" onclick="plusSlides(1, 'LH')">&#10095</a>
+                </div>
+                <br>
+                <div style="text-align:center">
+                    <span class="SlideshowDot" onclick="currentSlide(1, 'LH')" id="LHDot"></span>
+                    <span class="SlideshowDot" onclick="currentSlide(2, 'LH')" id="LHDot"></span>
+                    <span class="SlideshowDot" onclick="currentSlide(3, 'LH')" id="LHDot"></span>
+                    <span class="SlideshowDot" onclick="currentSlide(4, 'LH')" id="LHDot"></span>
+                    <span class="SlideshowDot" onclick="currentSlide(5, 'LH')" id="LHDot"></span>
+                </div>
+                <!-- <div class="row">
                     <div class="column">
                         <img src="Lucifer'sHordesImages/Attacking.jpg" alt="A warrior swinging his sword" style="width:100%">
                     </div>
@@ -34,7 +74,7 @@
                     <div class="column">
                         <img src="Lucifer'sHordesImages/Statue.jpg" alt="A warrior admiring a statue." style="width:100%">
                     </div>
-                </div>
+                </div>-->
             </div>
 
             <button class="accordion">Void Graphics late 2020</button>
@@ -71,6 +111,7 @@
 
         var accordion = document.getElementsByClassName("accordion");
         var i;
+        initSlideshows();
         for(i=0;i<accordion.length;i++){
             accordion[i].addEventListener("click",function(){
                 this.classList.toggle("active");
