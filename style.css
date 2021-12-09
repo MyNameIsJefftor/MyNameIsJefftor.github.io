@@ -29,10 +29,14 @@ Change link color on hover
 
 body, html{
     height: 100%;
-    margin:0;
+    margin: 0px;
+    padding:0px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+p{
+    text-align: center;
+}
 
 /*color codes
 purple #5a3b96
@@ -50,11 +54,6 @@ orange? #965a3b
     --pagebackground: #414141;
 }
 
-.video{
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%
-}
 .tablink{
     background-color:var(--gray);
     color:lightgray;
@@ -206,6 +205,10 @@ orange? #965a3b
     -webkit-animation-duration: 1.5s;
     animation-name:fade;
     animation-duration: 1.5s;
+}
+
+.classDesc{
+    color: whitesmoke;
 }
 
 @-webkit-keyframes fade{
