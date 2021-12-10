@@ -34,10 +34,6 @@ body, html{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p{
-    text-align: center;
-}
-
 /*color codes
 purple #5a3b96
 green #3b965a
@@ -72,10 +68,39 @@ orange? #965a3b
     float: left;
     border:none;
     outline:none;
-    cursor: pointer;
+    text-align: center;
     padding: 14px 16px;
     font-size:30px;
     width: 25%;
+}
+
+.flip{
+    width: 25%;
+    float:left;
+}
+
+.flip::after{
+    display: none;
+}
+.flip:hover:before{
+    opacity: 0;
+    transform: translateY(-50%) rotateX(90deg);
+}
+
+.flip:before{
+    top: 0;
+    left: 0;
+    padding: 0px;
+    opacity: 1;
+    width: 100%;
+    color: var(--green);
+    display: block;
+    transition: 0.5s;
+    position: relative;
+    background: var(--darkPurple);
+    content: "Kurtis's Portfolio";
+    align-content: center;
+    transform: translateY(0) rotateX(0);
 }
 
 .tablink:hover{
